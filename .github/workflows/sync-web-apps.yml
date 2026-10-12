@@ -1,0 +1,97 @@
+name: Sync web apps
+
+# 每日定时从 storytold/* 各仓库拉取最新的 web 构建产物，
+# 增量部署到 gh-pages 分支（每个应用固定访问 /{app}/，只保留最新版本）。
+
+on:
+  schedule:
+    # UTC 03:00 每天执行一次（北京时间约 11:00）
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "强制重新下载所有应用（忽略版本比对）"
+        type: boolean
+        default: false
+      only:
+        description: "仅同步指定应用（逗号分隔，留空则全部）"
+        required: false
+        type: string
+        default: ""
+
+# GITHUB_TOKEN 需要写入权限以推送 gh-pages 分支
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-web-apps
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Fetch releases & deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (scripts / config)
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Prepare gh-pages workspace
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          AUTH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}"
+          PLAIN_URL="https://github.com/${GITHUB_REPOSITORY}"
+          if git ls-remote --exit-code --heads "$AUTH_URL" gh-pages >/dev/null 2>&1; then
+            echo "gh-pages branch exists, pulling existing content for incremental keep"
+            git clone --depth 1 --branch gh-pages "$AUTH_URL" gh-pages
+            git -C gh-pages remote set-url origin "$PLAIN_URL"
+          else
+            echo "gh-pages branch missing, init empty workspace (first run downloads all)"
+            mkdir -p gh-pages
+            git -C gh-pages -c init.defaultBranch=gh-pages init -q
+            git -C gh-pages remote add origin "$PLAIN_URL"
+          fi
+
+      - name: Sync releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force }}
+          ONLY: ${{ inputs.only }}
+        run: node scripts/sync.mjs --dest ./gh-pages
+
+      - name: Commit & push to gh-pages
+        id: deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd gh-pages
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No change, skip commit"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -qm "chore(web): sync apps $(date -u +%Y-%m-%d)"
+            git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" HEAD:refs/heads/gh-pages
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Aircraft web sync"
+            echo ""
+            echo "- pushed gh-pages: \`${{ steps.deploy.outputs.pushed }}\`"
+            echo "- site URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+            echo ""
+            echo "> On first run, set repo **Settings -> Pages** source to \`Deploy from a branch\`, branch \`gh-pages\` / \`/(root)\`."
+          } >> "$GITHUB_STEP_SUMMARY"

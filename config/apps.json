@@ -1,0 +1,17 @@
+{
+  "org": "storytold",
+  "apps": [
+    { "id": "photocraft", "title": "PhotoCraft" },
+    { "id": "filmcraft", "title": "FilmCraft" },
+    { "id": "vectorcraft", "title": "VectorCraft" },
+    { "id": "lightcraft", "title": "LightCraft" },
+    { "id": "pdfcraft", "title": "PdfCraft" },
+    { "id": "effectcraft", "title": "EffectCraft" },
+    { "id": "designcraft", "title": "DesignCraft" },
+    { "id": "wordcraft", "title": "WordCraft" },
+    { "id": "soundcraft", "title": "SoundCraft" },
+    { "id": "deckcraft", "title": "DeckCraft" },
+    { "id": "cadcraft", "title": "CadCraft" },
+    { "id": "gridcraft", "title": "GridCraft" }
+  ]
+}
