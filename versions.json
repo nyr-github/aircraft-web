@@ -1,14 +1,4 @@
 {
-  "filmcraft": {
-    "version": "0.7.2",
-    "tag": "v0.7.2",
-    "asset": "filmcraft-web-0.7.2.zip",
-    "url": "https://github.com/storytold/filmcraft/releases/download/v0.7.2/filmcraft-web-0.7.2.zip",
-    "size": 13166192,
-    "release_html": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
-    "published_at": "2026-10-12T21:22:57Z",
-    "updated_at": "2026-10-12T22:26:35.268Z"
-  },
   "photocraft": {
     "version": "0.8.2",
     "tag": "v0.8.2",
@@ -17,6 +7,16 @@
     "size": 11063686,
     "release_html": "https://github.com/storytold/photocraft/releases/tag/v0.8.2",
     "published_at": "2026-10-12T21:22:47Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "filmcraft": {
+    "version": "0.7.2",
+    "tag": "v0.7.2",
+    "asset": "filmcraft-web-0.7.2.zip",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.7.2/filmcraft-web-0.7.2.zip",
+    "size": 13166192,
+    "release_html": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
+    "published_at": "2026-10-12T21:22:57Z",
     "updated_at": "2026-10-12T22:26:35.268Z"
   },
   "vectorcraft": {

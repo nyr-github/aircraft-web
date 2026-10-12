@@ -1,17 +1,7 @@
 {
-  "generated_at": "2026-10-12T22:26:35.268Z",
+  "generated_at": "2026-10-12T23:09:59.059Z",
   "org": "storytold",
   "apps": [
-    {
-      "id": "filmcraft",
-      "title": "FilmCraft",
-      "version": "0.7.2",
-      "tag": "v0.7.2",
-      "path": "./filmcraft/",
-      "updated_at": "2026-10-12T22:26:35.268Z",
-      "published_at": "2026-10-12T21:22:57Z",
-      "release": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2"
-    },
     {
       "id": "photocraft",
       "title": "PhotoCraft",
@@ -21,6 +11,16 @@
       "updated_at": "2026-10-12T22:26:35.268Z",
       "published_at": "2026-10-12T21:22:47Z",
       "release": "https://github.com/storytold/photocraft/releases/tag/v0.8.2"
+    },
+    {
+      "id": "filmcraft",
+      "title": "FilmCraft",
+      "version": "0.7.2",
+      "tag": "v0.7.2",
+      "path": "./filmcraft/",
+      "updated_at": "2026-10-12T22:26:35.268Z",
+      "published_at": "2026-10-12T21:22:57Z",
+      "release": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2"
     },
     {
       "id": "vectorcraft",
