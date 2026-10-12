@@ -88,7 +88,7 @@ jobs:
         if: always()
         run: |
           {
-            echo "### Aircraft web sync"
+            echo "### ArtCraft web sync"
             echo ""
             echo "- pushed gh-pages: \`${{ steps.deploy.outputs.pushed }}\`"
             echo "- site URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
