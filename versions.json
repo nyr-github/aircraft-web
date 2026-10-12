@@ -1,0 +1,122 @@
+{
+  "filmcraft": {
+    "version": "0.7.2",
+    "tag": "v0.7.2",
+    "asset": "filmcraft-web-0.7.2.zip",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.7.2/filmcraft-web-0.7.2.zip",
+    "size": 13166192,
+    "release_html": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
+    "published_at": "2026-10-12T21:22:57Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "photocraft": {
+    "version": "0.8.2",
+    "tag": "v0.8.2",
+    "asset": "photocraft-web-0.8.2.zip",
+    "url": "https://github.com/storytold/photocraft/releases/download/v0.8.2/photocraft-web-0.8.2.zip",
+    "size": 11063686,
+    "release_html": "https://github.com/storytold/photocraft/releases/tag/v0.8.2",
+    "published_at": "2026-10-12T21:22:47Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "vectorcraft": {
+    "version": "0.10.0",
+    "tag": "v0.10.0",
+    "asset": "vectorcraft-web-0.10.0.zip",
+    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.10.0/vectorcraft-web-0.10.0.zip",
+    "size": 23642640,
+    "release_html": "https://github.com/storytold/vectorcraft/releases/tag/v0.10.0",
+    "published_at": "2026-10-12T15:56:13Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "lightcraft": {
+    "version": "0.7.1",
+    "tag": "v0.7.1",
+    "asset": "lightcraft-web-0.7.1.zip",
+    "url": "https://github.com/storytold/lightcraft/releases/download/v0.7.1/lightcraft-web-0.7.1.zip",
+    "size": 66402662,
+    "release_html": "https://github.com/storytold/lightcraft/releases/tag/v0.7.1",
+    "published_at": "2026-10-12T21:22:50Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "pdfcraft": {
+    "version": "0.7.1",
+    "tag": "v0.7.1",
+    "asset": "pdfcraft-web-0.7.1.zip",
+    "url": "https://github.com/storytold/pdfcraft/releases/download/v0.7.1/pdfcraft-web-0.7.1.zip",
+    "size": 14047380,
+    "release_html": "https://github.com/storytold/pdfcraft/releases/tag/v0.7.1",
+    "published_at": "2026-10-12T15:55:32Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "effectcraft": {
+    "version": "0.9.2",
+    "tag": "v0.9.2",
+    "asset": "effectcraft-web-0.9.2.zip",
+    "url": "https://github.com/storytold/effectcraft/releases/download/v0.9.2/effectcraft-web-0.9.2.zip",
+    "size": 18801063,
+    "release_html": "https://github.com/storytold/effectcraft/releases/tag/v0.9.2",
+    "published_at": "2026-10-12T21:22:55Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "designcraft": {
+    "version": "0.7.1",
+    "tag": "v0.7.1",
+    "asset": "designcraft-web-0.7.1.zip",
+    "url": "https://github.com/storytold/designcraft/releases/download/v0.7.1/designcraft-web-0.7.1.zip",
+    "size": 15098404,
+    "release_html": "https://github.com/storytold/designcraft/releases/tag/v0.7.1",
+    "published_at": "2026-10-12T21:22:52Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "wordcraft": {
+    "version": "0.6.1",
+    "tag": "v0.6.1",
+    "asset": "wordcraft-web-0.6.1.zip",
+    "url": "https://github.com/storytold/wordcraft/releases/download/v0.6.1/wordcraft-web-0.6.1.zip",
+    "size": 14811800,
+    "release_html": "https://github.com/storytold/wordcraft/releases/tag/v0.6.1",
+    "published_at": "2026-10-12T16:22:15Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "soundcraft": {
+    "version": "0.6.1",
+    "tag": "v0.6.1",
+    "asset": "soundcraft-web-0.6.1.zip",
+    "url": "https://github.com/storytold/soundcraft/releases/download/v0.6.1/soundcraft-web-0.6.1.zip",
+    "size": 5642429,
+    "release_html": "https://github.com/storytold/soundcraft/releases/tag/v0.6.1",
+    "published_at": "2026-10-12T15:57:05Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "deckcraft": {
+    "version": "0.6.1",
+    "tag": "v0.6.1",
+    "asset": "deckcraft-web-0.6.1.zip",
+    "url": "https://github.com/storytold/deckcraft/releases/download/v0.6.1/deckcraft-web-0.6.1.zip",
+    "size": 8949762,
+    "release_html": "https://github.com/storytold/deckcraft/releases/tag/v0.6.1",
+    "published_at": "2026-10-12T18:22:34Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "cadcraft": {
+    "version": "0.6.2",
+    "tag": "v0.6.2",
+    "asset": "cadcraft-web-0.6.2.zip",
+    "url": "https://github.com/storytold/cadcraft/releases/download/v0.6.2/cadcraft-web-0.6.2.zip",
+    "size": 7840826,
+    "release_html": "https://github.com/storytold/cadcraft/releases/tag/v0.6.2",
+    "published_at": "2026-10-12T16:40:01Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  },
+  "gridcraft": {
+    "version": "0.6.1",
+    "tag": "v0.6.1",
+    "asset": "gridcraft-web-0.6.1.zip",
+    "url": "https://github.com/storytold/gridcraft/releases/download/v0.6.1/gridcraft-web-0.6.1.zip",
+    "size": 6961445,
+    "release_html": "https://github.com/storytold/gridcraft/releases/tag/v0.6.1",
+    "published_at": "2026-10-12T17:07:30Z",
+    "updated_at": "2026-10-12T22:26:35.268Z"
+  }
+}

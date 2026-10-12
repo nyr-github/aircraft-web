@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>DeckCraft</title>
+  
+<script type="module">
+import init, * as bindings from './deckcraft-web-33aef20310d74aba.js';
+const wasm = await init({ module_or_path: './deckcraft-web-33aef20310d74aba_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="icon" href="./ai.storyteller.deckcraft-74e97653dd8dd002.png" integrity="sha384-THDce39ERZRgdnEtM/35FnmU4IExPfz9k2XrApCGWP0NUMC98NUWG1VYUMNXNCiD"/>
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #262626; }
+    #deckcraft_canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    #deckcraft_loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #b8b8b8; font: 14px system-ui, sans-serif; pointer-events: none; }
+  </style>
+<link rel="modulepreload" href="./deckcraft-web-33aef20310d74aba.js" crossorigin="anonymous" integrity="sha384-mRs8g6Bdmp1B4kh4UqOkT73109Y2xSi0Femo0NIZSupNIFHa4E22W6clzXUevjr4"><link rel="preload" href="./deckcraft-web-33aef20310d74aba_bg.wasm" crossorigin="anonymous" integrity="sha384-MwHtMiw8ahDFXlArxojTgh4O04KLKlH4mSJQLphFpCJ0KkuU9Htku7i4krbbxBSw" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="deckcraft_canvas"></canvas>
+  <div id="deckcraft_loading">Loading DeckCraft&hellip;</div>
+</body>
+</html>
