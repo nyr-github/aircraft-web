@@ -19,6 +19,7 @@
  *   ORG           覆盖 apps.json 中的 org
  *   PAGES_BASE    入口 index.html 中链接的基准路径（默认相对 "./"）
  *   PAGES_URL     app.json 中使用链接的绝对基准 URL（GitHub Pages 根，末尾带 /）
+ *   LOGO_BASE     入口 index.html 中应用图标的基准 URL（默认 https://getartcraft.com/images/apps/）
  */
 
 import fs from "node:fs";
@@ -372,12 +373,16 @@ function buildAppList(manifest) {
 // ---------------------------------------------------------------------------
 function renderIndex(outFile, manifest) {
   const base = process.env.PAGES_BASE || "./";
+  // 应用图标托管在 ArtCraft 官网，按 {id}/icon.webp 规律拼接
+  const logoBase = process.env.LOGO_BASE || "https://getartcraft.com/images/apps/";
   const cards = manifest.apps
     .map((a) => {
       const href = `${base}${a.id}/`;
+      const logo = `${logoBase}${a.id}/icon.webp`;
       const ver = a.version ? `v${a.version}` : "";
       const date = a.updated_at ? a.updated_at.slice(0, 10) : "";
       return `      <a class="card" href="${href}">
+        <img class="logo" src="${escapeHtml(logo)}" alt="" width="48" height="48" loading="lazy">
         <h2>${escapeHtml(a.title)}</h2>
         <p class="id">${escapeHtml(a.id)}</p>
         <div class="meta"><span class="ver">${ver}</span><span class="date">${date}</span></div>
@@ -403,6 +408,7 @@ function renderIndex(outFile, manifest) {
     .grid { max-width:1080px; margin: 24px auto 64px; padding: 0 24px; display:grid; gap:16px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
     .card { display:block; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 18px 16px; transition: transform .12s ease, border-color .12s ease; }
     .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card .logo { width:48px; height:48px; border-radius:10px; display:block; margin:0 0 12px; object-fit:contain; background:var(--bg); }
     .card h2 { margin:0 0 2px; font-size:18px; }
     .card .id { margin:0 0 14px; color:var(--muted); font-size:13px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
     .card .meta { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--muted); }
