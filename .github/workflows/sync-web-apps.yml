@@ -23,6 +23,12 @@ on:
 permissions:
   contents: write
 
+# 自定义域名（GitHub Pages CNAME）：app.json 使用链接与 Summary 站点 URL 的基准
+# 优先读取仓库 Settings -> Secrets and variables -> Actions -> Variables 中的 PAGES_URL，
+# 未配置时回退为 github.io 默认地址。
+env:
+  PAGES_URL: ${{ vars.PAGES_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+
 concurrency:
   group: sync-web-apps
   cancel-in-progress: false
@@ -63,7 +69,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ inputs.force }}
           ONLY: ${{ inputs.only }}
-          PAGES_URL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          PAGES_URL: ${{ env.PAGES_URL }}
         run: node scripts/sync.mjs --dest ./gh-pages
 
       - name: Commit & push to gh-pages
@@ -92,7 +98,7 @@ jobs:
             echo "### ArtCraft web sync"
             echo ""
             echo "- pushed gh-pages: \`${{ steps.deploy.outputs.pushed }}\`"
-            echo "- site URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+            echo "- site URL: ${{ env.PAGES_URL }}"
             echo ""
             echo "> On first run, set repo **Settings -> Pages** source to \`Deploy from a branch\`, branch \`gh-pages\` / \`/(root)\`."
           } >> "$GITHUB_STEP_SUMMARY"

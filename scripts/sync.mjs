@@ -334,6 +334,15 @@ async function main() {
     // 关闭 Jekyll 处理，避免 _headers 等文件被 Pages 忽略
     fs.writeFileSync(path.join(DEST, ".nojekyll"), "", "utf8");
 
+    // 从 PAGES_URL 解析自定义域名写入 CNAME，保证 gh-pages 全量覆盖后域名不丢失
+    const pagesUrl = process.env.PAGES_URL || "";
+    if (/^https?:\/\//i.test(pagesUrl)) {
+      const host = new URL(pagesUrl).hostname;
+      if (host && !/\.github\.io$/i.test(host)) {
+        fs.writeFileSync(path.join(DEST, "CNAME"), host + "\n", "utf8");
+      }
+    }
+
     renderIndex(path.join(DEST, "index.html"), manifest);
   }
 
