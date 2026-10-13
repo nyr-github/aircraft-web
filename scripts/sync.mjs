@@ -424,7 +424,7 @@ function escapeHtml(s) {
     /[&<>"']/g,
     (c) =>
       ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
-        c
+      c
       ],
   );
 }
@@ -441,14 +441,14 @@ function report(summary) {
   if (summary.updated.length)
     log(
       "更新详情: " +
-        summary.updated
-          .map((u) => `${u.id}@${u.version}${u.dryRun ? "(dry)" : ""}`)
-          .join(", "),
+      summary.updated
+        .map((u) => `${u.id}@${u.version}${u.dryRun ? "(dry)" : ""}`)
+        .join(", "),
     );
   if (summary.failed.length)
     log(
       "失败详情: " +
-        summary.failed.map((f) => `${f.id}: ${f.reason}`).join(" | "),
+      summary.failed.map((f) => `${f.id}: ${f.reason}`).join(" | "),
     );
 
   const out = process.env.GITHUB_OUTPUT;
