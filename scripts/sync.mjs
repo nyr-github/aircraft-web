@@ -18,6 +18,7 @@
  *   GITHUB_TOKEN  提升 API 速率限制（公开仓库产物下载无需鉴权）
  *   ORG           覆盖 apps.json 中的 org
  *   PAGES_BASE    入口 index.html 中链接的基准路径（默认相对 "./"）
+ *   PAGES_URL     app.json 中使用链接的绝对基准 URL（GitHub Pages 根，末尾带 /）
  */
 
 import fs from "node:fs";
@@ -327,6 +328,9 @@ async function main() {
     };
     writeJson(path.join(DEST, "manifest.json"), manifest);
 
+    // 供外部访问的应用清单：名称、版本、日期、使用链接
+    writeJson(path.join(DEST, "app.json"), buildAppList(manifest));
+
     // 关闭 Jekyll 处理，避免 _headers 等文件被 Pages 忽略
     fs.writeFileSync(path.join(DEST, ".nojekyll"), "", "utf8");
 
@@ -334,6 +338,24 @@ async function main() {
   }
 
   report(summary);
+}
+
+// ---------------------------------------------------------------------------
+// 外部访问清单 app.json
+// ---------------------------------------------------------------------------
+/** 以 PAGES_URL 为基准拼出每个应用的绝对访问链接；未配置时回退为相对路径。 */
+function buildAppList(manifest) {
+  const base = process.env.PAGES_URL || "./";
+  return {
+    generated_at: manifest.generated_at,
+    apps: manifest.apps.map((a) => ({
+      id: a.id,
+      name: a.title,
+      version: a.version,
+      date: (a.updated_at || a.published_at || "").slice(0, 10),
+      url: `${base}${a.id}/`,
+    })),
+  };
 }
 
 // ---------------------------------------------------------------------------
