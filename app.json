@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-13T17:29:03.374Z",
+  "apps": [
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "version": "0.8.2",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/photocraft/"
+    },
+    {
+      "id": "filmcraft",
+      "name": "FilmCraft",
+      "version": "0.7.2",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/filmcraft/"
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "version": "0.10.0",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/vectorcraft/"
+    },
+    {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "version": "0.7.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/lightcraft/"
+    },
+    {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "version": "0.7.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/pdfcraft/"
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "version": "0.9.2",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/effectcraft/"
+    },
+    {
+      "id": "designcraft",
+      "name": "DesignCraft",
+      "version": "0.7.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/designcraft/"
+    },
+    {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "version": "0.6.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/wordcraft/"
+    },
+    {
+      "id": "soundcraft",
+      "name": "SoundCraft",
+      "version": "0.6.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/soundcraft/"
+    },
+    {
+      "id": "deckcraft",
+      "name": "DeckCraft",
+      "version": "0.6.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/deckcraft/"
+    },
+    {
+      "id": "cadcraft",
+      "name": "CadCraft",
+      "version": "0.6.2",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/cadcraft/"
+    },
+    {
+      "id": "gridcraft",
+      "name": "GridCraft",
+      "version": "0.6.1",
+      "date": "2026-10-12",
+      "url": "https://nyr-github.github.io/artcraft-web/gridcraft/"
+    }
+  ]
+}
