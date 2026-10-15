@@ -204,6 +204,9 @@ soundcraft-cli app --port 7801 ui.screenshot '{"path":"shot.png"}'
 
 # Give Claude a DAW.
 claude mcp add soundcraft -- soundcraft-cli mcp --demo
+
+# Or keep the agent to some folders (reads and writes are separate roots).
+soundcraft-cli mcp --automation-read-root DIR --automation-write-root DIR
 ```
 
 See [`docs/control-protocol.md`](docs/control-protocol.md) and [`docs/mcp.md`](docs/mcp.md).
@@ -252,7 +255,7 @@ very welcome, in the issues or on Discord.
 
 ## Downloads
 
-**Download SoundCraft** from GitHub: the [latest release](https://github.com/storytold/soundcraft/releases/latest) has every build listed below, and [all releases](https://github.com/storytold/soundcraft/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
+**Download SoundCraft** from GitHub: the [latest release](https://github.com/storytold/soundcraft/releases/latest) has every build listed below, and [all releases](https://github.com/storytold/soundcraft/releases) have earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
 
 ### Windows
 

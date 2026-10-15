@@ -6,8 +6,8 @@
   <title>DesignCraft</title>
   
 <script type="module">
-import init, * as bindings from './designcraft-web-1fb8acb405fd0a62.js';
-const wasm = await init({ module_or_path: './designcraft-web-1fb8acb405fd0a62_bg.wasm' });
+import init, * as bindings from './designcraft-web-e2c8d44eb5555996.js';
+const wasm = await init({ module_or_path: './designcraft-web-e2c8d44eb5555996_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -22,7 +22,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     #designcraft_loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
       color: #b8b8b8; font: 14px system-ui, sans-serif; pointer-events: none; }
   </style>
-<link rel="modulepreload" href="./designcraft-web-1fb8acb405fd0a62.js" crossorigin="anonymous" integrity="sha384-le1YwU6jRnadWHEofl/tFMgHkXs6/FC95yrDGPy1RDfku4vZOLHl8PScNogXdYNi"><link rel="preload" href="./designcraft-web-1fb8acb405fd0a62_bg.wasm" crossorigin="anonymous" integrity="sha384-vcXZycfkVf5ekyoae5BowWytcHLKOXcAM0IwaySWkej1N7UxASONmJDWXyGm7nEw" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./designcraft-web-e2c8d44eb5555996.js" crossorigin="anonymous" integrity="sha384-cZJR7ln7fCFhP8XQmQjWyaemjmXizzL5Qw2jcIUXzYgQWqS7ltdjTvkzToBBm16S"><link rel="preload" href="./designcraft-web-e2c8d44eb5555996_bg.wasm" crossorigin="anonymous" integrity="sha384-QhHXNiZIES4wGAjtwYGKCWU2QhIRmqcaGvw4enTQStDC//3qX1NPQ5Yn5o9Hf0Dl" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="designcraft_canvas"></canvas>
   <div id="designcraft_loading">Loading DesignCraft&hellip;</div>

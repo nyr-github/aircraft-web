@@ -106,6 +106,7 @@ cargo run --release -p designcraft -- --sample             # open the sample mag
 cargo run --release -p designcraft -- --sample --control 7979   # + JSON control channel
 cargo run --release -p designcraft-cli -- run --sample --all-pages out/       # headless: render every page to PNG
 cargo run --release -p designcraft-cli -- commands         # list every command
+cargo run --release -p designcraft-cli -- script --help    # command script syntax (docs/agents.md)
 cargo xtask ci                                             # fmt, clippy, tests, assets, layering, wasm
 ```
 

@@ -347,6 +347,13 @@ Remove-Item Env:WGPU_BACKEND                     # restore the default for later
 An explicit `gl` override can bring the driver crash back on affected systems. The macOS, Linux
 and web backend defaults are unchanged.
 
+A PC whose GPUs were installed from different driver packages of one vendor (a laptop with an
+integrated and a discrete AMD GPU, for example) can list one GPU twice, once through each installed
+version of the Vulkan driver, and a window drawn through the stale one crashes inside the driver
+(`amdvlk64.dll`, exit code `0xc0000005`). FilmCraft draws with the newer one and says so in
+`%APPDATA%\FilmCraft\Logs\filmcraft.log`; installing one driver package for every GPU removes the
+duplicate. With one driver per GPU the adapter is the one wgpu picks, as before.
+
 ### macOS
 
 | Build | File | Notes |
