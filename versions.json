@@ -20,14 +20,14 @@
     "updated_at": "2026-10-15T08:00:28.420Z"
   },
   "vectorcraft": {
-    "version": "0.11.0",
-    "tag": "v0.11.0",
-    "asset": "vectorcraft-web-0.11.0.zip",
-    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.11.0/vectorcraft-web-0.11.0.zip",
-    "size": 24687078,
-    "release_html": "https://github.com/storytold/vectorcraft/releases/tag/v0.11.0",
-    "published_at": "2026-10-14T14:54:46Z",
-    "updated_at": "2026-10-15T08:00:28.420Z"
+    "version": "0.12.0",
+    "tag": "v0.12.0",
+    "asset": "vectorcraft-web-0.12.0.zip",
+    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.12.0/vectorcraft-web-0.12.0.zip",
+    "size": 22585168,
+    "release_html": "https://github.com/storytold/vectorcraft/releases/tag/v0.12.0",
+    "published_at": "2026-10-16T12:26:40Z",
+    "updated_at": "2026-10-17T07:32:52.698Z"
   },
   "lightcraft": {
     "version": "0.8.0",

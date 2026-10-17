@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T07:54:59.117Z",
+  "generated_at": "2026-10-17T07:32:52.698Z",
   "org": "storytold",
   "apps": [
     {
@@ -25,12 +25,12 @@
     {
       "id": "vectorcraft",
       "title": "VectorCraft",
-      "version": "0.11.0",
-      "tag": "v0.11.0",
+      "version": "0.12.0",
+      "tag": "v0.12.0",
       "path": "./vectorcraft/",
-      "updated_at": "2026-10-15T08:00:28.420Z",
-      "published_at": "2026-10-14T14:54:46Z",
-      "release": "https://github.com/storytold/vectorcraft/releases/tag/v0.11.0"
+      "updated_at": "2026-10-17T07:32:52.698Z",
+      "published_at": "2026-10-16T12:26:40Z",
+      "release": "https://github.com/storytold/vectorcraft/releases/tag/v0.12.0"
     },
     {
       "id": "lightcraft",
